@@ -237,6 +237,7 @@ buildStdenv.mkDerivation ({
     # this will run autoconf213
     configureScript="$(realpath ./mach) configure"
     export MOZCONFIG=$(pwd)/mozconfig
+    export MOZILLA_OFFICIAL=1
 
     # Set C flags for Rust's bindgen program. Unlike ordinary C
     # compilation, bindgen does not invoke $CC directly. Instead it
